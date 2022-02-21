@@ -1,0 +1,78 @@
+/* Bordered form */
+form {
+	margin-top: 40px;
+	background-color: #f1f1f1;
+	border: 3px solid #a08c8c;
+	margin: auto;
+	width: 30cm;
+}
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: #04aa6d;
+	color: white;
+	margin-left: 90px;
+	height: 10px;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+	opacity: 0.6;
+}
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+	/* margin-top: 5cm; */
+	width: 30%;
+	padding-left: 450px;
+}
+
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+}
+.signin {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0;
+	gap: 30px;
+}
+.img,
+.container {
+	/* display: table-cell; */
+	vertical-align: top;
+	padding-left: 20px;
+}
+.container {
+	margin-right: 20px;
+}
+form {
+	background-color: rgb(18, 209, 91);
+}

@@ -1,0 +1,27 @@
+.footer {
+	left: 0;
+	bottom: 0;
+	height: min-content;
+	padding: 30px 50px;
+	width: 100%;
+	color: #fff;
+	background-color: #077c39;
+	text-transform: capitalize;
+}
+
+.adress {
+	text-align: right;
+	align-content: space-between;
+	text-align: justify;
+}
+.bottom-footer {
+	text-align: center;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.footer-right {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}

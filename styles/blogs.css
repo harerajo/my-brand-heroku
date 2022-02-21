@@ -1,0 +1,28 @@
+body {
+	background-color: rgb(219, 223, 186);
+}
+.image {
+	padding-left: 10px;
+	border-radius: 19px;
+}
+.blog {
+	font-size: 350%;
+	margin-left: 10%;
+	padding-top: 8%;
+}
+.text {
+	text-align: justify;
+	padding: 50px;
+}
+p {
+	padding: 28px;
+	font-size: large;
+}
+.article {
+	padding-left: 08%;
+}
+.comment {
+	margin-left: 78px;
+	display: flex;
+	flex-direction: row;
+}

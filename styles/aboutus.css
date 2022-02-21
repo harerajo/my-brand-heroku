@@ -1,0 +1,21 @@
+body {
+	background-color: rgb(245, 237, 164);
+}
+h1 {
+	text-align: center;
+	font-size: 300%;
+}
+.awesome {
+	font-size: 120%;
+	text-align: justify;
+	padding: 40px;
+}
+h4 {padding-left: 45%;
+	font-size: 250%;
+}
+h3 {
+	font-size: 100%;
+	text-align: center;
+}
+.joj {
+	margin-top: 10%;padding-top: 4%;

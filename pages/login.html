@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../styles/login.css" />
+  <link rel="stylesheet" href="../styles/article.css" />
+  <link rel="stylesheet" href="../styles/menu.css">
+</head>
+
+<body>
+  <div class="menu-bar">
+    <ul>
+      <li>
+        <a href="jona.html">home</a>
+      </li>
+      <li>
+        <a href="aboutus.html">about us</a>
+      </li>
+      <li>
+        <a href="contact.html">contact</a>
+      </li>
+      <li>
+        <a href="blogs.html">blogs</a>
+      </li>
+      <li class="active">
+        <a href="login.html">login</a>
+      </li>
+    </ul>
+  </div>
+  <form action="action_page.php" method="post">
+<div class="signin">
+  <div>
+    <img src="../images/logo.jpg" >
+  </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required />
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" />
+      <p>don't have an account?<big color="red"><a href="sign up.html"> sign up</a></big></p><br>
+      <button type="submit">Login</button>
+    </div>
+    </div>
+  </form>
+</body>
+
+</html>
