@@ -1,0 +1,242 @@
+body {
+	margin: 0;
+	padding: 0;
+/* background-color: ; */
+	font-family: "roboto", sans-serif;
+}
+header {
+	background-color: rgb(31, 39, 34);
+
+	padding: 20px;
+	width: 100%;
+}
+.left_area h3 {
+	color: white;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 900;
+}
+.left_area span {
+	color: #000202;
+}
+.logout_btn {
+	padding: 5px;
+	background: rgb(19, 13, 7);
+	float: right;
+	margin-top: -30px;
+	margin-right: 40px;
+	border-radius: 2px;
+	font-size: 15px;
+	font-weight: 600px;
+	color: #fff;
+	transition-property: background;
+}
+.logout_btn:hover {
+	background: rgb(70, 235, 158);
+}
+.side_bar {
+	background: #000000;
+	/* margin-top: 50px; */
+	padding-top: 30px;
+	position: fixed;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	transition: 0.5s;
+	transition-property: left;
+}
+.side_bar .profile_image {
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+}
+.side_bar h4 {
+	color: white;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.side_bar a {
+	color: white;
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: 0.8s;
+	transition-property: background;
+}
+.side_bar a:hover {
+	background: #1dc4e7;
+}
+.side_bar i {
+	padding-right: 10px;
+}
+label #sidebar_btn {
+	z-index: 1;
+	color: #fff;
+	position: fixed;
+	cursor: pointer;
+	left: 300px;
+	font-size: 20px;
+	margin: 50px k;
+	transition: 0.8s;
+	transition-property: color;
+}
+label #sidebar_btn:hover {
+	color: #1dc4e7;
+}
+#check:checked ~ .side_bar {
+	left: -190px;
+}
+#check:checked ~ .side_bar a span {
+	display: none;
+}
+#check:checked ~ .side_bar a {
+	font-size: 20px;
+	margin-left: 170px;
+	width: 80px;
+}
+.content {
+	margin-left: 250px;
+	/* background-image: url(/images/dashimage.jpeg); */
+	/* background-color: rgb(255, 255, 255); */
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: 0.5s;
+}
+#check:checked ~ .content {
+	margin-left: 60px;
+}
+#check {
+	display: none;
+}
+table {
+	font-family: sans-serif;
+	border-collapse: collapse;
+}
+thead {
+	background-color: #333;
+	color: white;
+}
+thead,
+td {
+	padding: 20px;
+	font-size: medium;
+}
+tbody {
+	background-color: #eee;
+	color: #555;
+}
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 10px;
+}
+.popup .popuptext {
+	visibility: hidden;
+	width: 260px;
+	background-color: rgb(133, 24, 24);
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+}
+.contents {
+	width: 46%;
+	margin-left: 30px;
+	margin: 30px auto;
+	padding: 20px 30px;
+
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #5f2121;
+    height: 46px;
+}
+li:hover{
+	color: #5f2121;
+	cursor:pointer;
+}
+
+#profile-content{
+	display: flex;
+	justify-content: center;
+	color: #000000;
+	align-items: center;
+}
+/* .user-desc{
+	display: flex;
+	flex-direction: column;
+	border: #555 solid;
+	justify-content: center;
+	margin-left: -170px;
+} */
+.users {
+	margin: 50px;
+	padding: 40px;
+	/* width: 400px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	justify-content:space-evenly;
+	border: solid rgb(7, 6, 6);
+	border-radius: 9px;
+	height: fit-content;
+	background-color: #c0b3b3;
+	border-width: 10px solid;
+	flex-wrap: wrap;
+	/* border-top: #1dc4e7 solid; */
+	
+}
+.users #profile-image{
+	display: flex;
+	flex-direction: column;
+	height: 280px;
+	border-radius: 30px;
+	border: #1dc4e7 solid;
+}
+.user-desc{
+padding: 50px;
+	border-left: solid rgb(148, 150, 148);
+	height: 200px;
+	
+}
+#name-under-profile{
+	font-size: 20px;
+	font-weight: 900;
+	color: rgb(43, 68, 31);
+	text-transform: capitalize;
+}
+#email-under-profile{
+	text-decoration: none;
+    color: rgb(43, 68, 31);
+}
+.profile{
+	border-bottom: rgb(158, 150, 150) solid;
+}
+td #sub-name{
+	width: 100px;
+}

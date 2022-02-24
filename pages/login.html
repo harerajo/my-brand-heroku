@@ -7,46 +7,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="../styles/login.css" />
-  <link rel="stylesheet" href="../styles/article.css" />
-  <link rel="stylesheet" href="../styles/menu.css">
+  <link rel="stylesheet" href="../styles/common.css">
+  <link rel="stylesheet" href="../styles/header.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="menu-bar">
-    <ul>
-      <li>
-        <a href="jona.html">home</a>
-      </li>
-      <li>
-        <a href="aboutus.html">about us</a>
-      </li>
-      <li>
-        <a href="contact.html">contact</a>
-      </li>
-      <li>
-        <a href="blogs.html">blogs</a>
-      </li>
-      <li class="active">
-        <a href="login.html">login</a>
-      </li>
-    </ul>
-  </div>
-  <form action="action_page.php" method="post">
-<div class="signin">
-  <div>
-    <img src="../images/logo.jpg" >
+  <header>
+    <div class="header-container">
+      <nav class="menu-bar">
+        <div class="logo">
+          <img class="logo-img" src="../images/logo.jpg">
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <li class="active">
+              <a href="jona.html">home</a>
+            </li>
+            <li>
+              <a href="aboutus.html">about</a>
+            </li>
+            <li>
+              <a href="contact.html">contact</a>
+            </li>
+            <li>
+              <a href="blogs.html">blogs</a>
+            </li>
+            <li>
+              <a href="login.html">login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="signin-container">
+    <div class="signup-instead">
+      <img class="splash-img" src="../images/logo.jpg">
+      <h2 style="text-align: center;">Don't have an account?</h2>
+      <p class="get-started">Get started by creating an account</p>
+      <big color="red"></big><a class="signup-button" href="sign up.html"> Sign up</a></big>
+    </div>
+    <form action="javascript:void(0);" onsubmit="loginUser()">
+      <h3 align="center">We are happy to have you!</h3>
+      <fieldset>
+        <input id="email" type="email" placeholder="email" autocomplete="off"
+          pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
+        <legend><label for="email">email</label></legend>
+      </fieldset>
+      <fieldset>
+        <input id="password" type="password" placeholder="password" autocomplete="off" />
+        <legend><label for="password">password</label></legend>
+      </fieldset>
+      <p align="right"><a href="#">Forgot password?</a></p>
+      <button type="submit"><a href="/pages/dashboard.html"></a> Login</button>
+    </form>
   </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required />
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" />
-      <p>don't have an account?<big color="red"><a href="sign up.html"> sign up</a></big></p><br>
-      <button type="submit">Login</button>
-    </div>
-    </div>
-  </form>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+  <script src="../scripts/firebase.js"></script>
+  <script src="../scripts/auth.js"></script>
 </body>
 
 </html>

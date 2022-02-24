@@ -1,36 +1,45 @@
 /* Bordered form */
+:root {
+	--green: #1a9c03;
+}
 form {
-	margin-top: 40px;
-	background-color: #f1f1f1;
-	border: 3px solid #a08c8c;
-	margin: auto;
-	width: 30cm;
+	border: 1px solid #a08c8c;
+	width: 400px;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.signin-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0;
+	gap: 100px;
+	flex-wrap: wrap;
 }
 
 /* Full-width inputs */
-input[type="text"],
+input[type="email"],
 input[type="password"] {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
-	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
+	border-radius: 20px;
 }
 
 /* Set a style for all buttons */
 button {
-	background-color: #04aa6d;
-	color: white;
-	margin-left: 90px;
-	height: 10px;
-	border: none;
 	cursor: pointer;
-	width: 50%;
+	width: 40%;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 20px;
 }
 
 /* Add a hover effect for buttons */
-button:hover {
+input[type="submit"]:hover {
 	opacity: 0.6;
 }
 .imgcontainer {
@@ -38,17 +47,9 @@ button:hover {
 	margin: 24px 0 12px 0;
 }
 
-/* Avatar image */
-img.avatar {
-	width: 40%;
-	border-radius: 50%;
-}
-
 /* Add padding to containers */
 .container {
-	/* margin-top: 5cm; */
 	width: 30%;
-	padding-left: 450px;
 }
 
 @media screen and (max-width: 300px) {
@@ -57,22 +58,84 @@ img.avatar {
 		float: none;
 	}
 }
-.signin {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 100px 0;
-	gap: 30px;
+.splash-img {
+	width: 300px;
+	margin-bottom: 30px;
+	/* border-radius: 5px; */
 }
 .img,
 .container {
 	/* display: table-cell; */
 	vertical-align: top;
-	padding-left: 20px;
 }
 .container {
 	margin-right: 20px;
 }
-form {
-	background-color: rgb(18, 209, 91);
+
+fieldset {
+	--base-ratio: 4px;
+	font-family: monospace;
+	border: none;
+}
+
+input::placeholder {
+	opacity: 0;
+}
+
+legend {
+	margin-left: calc(2 * var(--base-ratio) + 10px);
+	transform: translateY(calc(100% + 5 * var(--base-ratio) + 1px));
+	background: transparent;
+	transition: all 0.75s ease;
+	font-weight: 900;
+}
+
+input:not(:placeholder-shown) ~ legend {
+	color: var(--green);
+	background: white;
+	transform: translateY(90%);
+}
+
+label {
+	cursor: text;
+	font-size: var(--typography-size);
+	text-transform: capitalize;
+	transition: font-size 0.75s ease;
+}
+
+input:not(:placeholder-shown) ~ legend > label {
+	font-size: calc(var(--typography-size) * 0.9);
+}
+
+/* Just for demo */
+
+.title {
+	font-size: 24px;
+	margin: 8px;
+}
+
+.signup-instead {
+	box-shadow: 0px 0px 20px 1px rgb(218 218 218);
+	padding: 20px;
+}
+
+.signup-button {
+	padding: 10px 50px;
+	border: 1px solid var(--green);
+	display: block;
+	border-radius: 20px;
+	width: fit-content;
+	text-decoration: none;
+	color: var(--green);
+}
+
+.signup-button:hover {
+	background-color: var(--green);
+	color: white;
+	transition: 0.7s;
+}
+
+.get-started {
+	color: gray;
+	margin: 10px auto;
 }

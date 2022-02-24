@@ -1,97 +1,173 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-body {
-  background-color: rgb(219, 223, 186);
-}
+/* body {
+	background-color: rgb(212, 48, 48);
+} */
 img {
-  width: 300px;
-  border-radius: 3005px;
+	padding: 50px;
+	width: 300px;
+	border-radius: 305px;
 }
 
-.menu-bar {
-  background: rgb(0, 100, 0);
-
-  text-align: center;
+.gallery {
+	/* background-color: red; */
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+	margin-right: 10px;
 }
-.menu-bar ul {
-  display: inline-flex;
-  list-style: none;
-  color: white;
+.gallery img {
+	/* background-color: red; */
+	/* margin-top: -50px; */
+	width: 400px;
+	border-radius: 10px;
 }
-.menu-bar ul li {
-  margin: 12px;
-  padding: 20px;
-  border-radius: 20px;
-}
-.menu-bar ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-.active,
-.menu-bar ul li a:hover {
-  background: #26e600;
-  margin: 12px;
-  padding: 20px;
-  border-radius: 20px;
+.cards {
+	/* margin-left: -60px; */
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
+.part1 {
+	/* margin-top: 60px; */
+	display: flex;
+}
+section {
+	/* background-color: rgb(140, 17, 15); */
+	margin: 10px 0;
+}
 h3 {
-  font-weight: lighter;
-  font-size: 24px;
+	font-weight: lighter;
+
+	font-size: 24px;
 }
 .hi {
-  text-align: justify;
-  width: 30%;
-  margin-left: 30%;
-  font-weight: lighter;
- margin-top: 11%;
- font-size:  80%;
+	/* text-align: justify;
+	width: 30%;
+	margin-left: 30%; */
+	font-weight: lighter;
+	margin-top: 100px;
+	/* font-size: 80%; */
 }
-.p1{
-  color: #52a840;
-  margin-left: 30%;
-  font-size: 300%;
-  margin-top: 9%;
+.p1 {
+	/* color: #52a840; */
+	margin-left: 30%;
+	font-size: 300%;
+	margin-top: 9%;
 }
-.s-home{
-  background-color: rgb(168, 219, 155);
-text-align: center;
-  font-size: 400%;
-  margin-top: 17%;
+.s-home {
+	/* background-color: rgb(246, 236, 188); */
+	text-align: center;
+	font-size: 400%;
+	/* margin-top: 17%; */
 }
-.gallery{
-  align-items: center;
-margin-top: 6%;
-margin-left: 6%;
-float:left;
-width: 390px;
-height: 20%;
+.gallery {
+	/* background-color: brown; */
+	align-items: center;
+	margin-top: 6%;
+	/* margin-left: 30%; */
+	float: left;
+	width: 390px;
+	height: 20%;
+	border-radius: 10%;
 }
- .skill1{
-   text-align: justify;
-  width: 80%;
+.skill1 {
+	text-align: justify;
+	width: 80%;
+	font-size: 120%;
+	margin-top: -40px;
+	margin-bottom: 20px;
+}
+.sk2 {
+	margin-top: 30%;
+}
+.B1 {
+	/* background-color: rgb(168, 219, 155); */
+	text-align: center;
+	font-size: 400%;
+	margin-top: 70%;
+}
+.n2 {
+	margin-top: 30%;
+}
+.n3 {
+	margin-top: 60%;
+}
+.contact-title {
+	/* background-color: rgb(168, 219, 155); */
+	text-align: center;
+	font-size: 400%;
+}
+.s-home1 {
+	text-align: center;
+	font-size: 300%;
+	margin-top: 100px;
+}
+.box a {
+	text-decoration: none;
+	color: #fff;
+}
 
- }
-.sk2{
-  margin-top: 30%;
+/* CONTACT SECTION */
+#contact-form {
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	width: 50%;
 }
-.B1{
-  background-color: rgb(168, 219, 155);
-  text-align: center;
-    font-size: 400%;
-    margin-top: 70%;
+.contact-us {
+	margin-bottom: 50px !important;
 }
-.n2{
-  margin-top: 30%;
+#contact-form div {
+	display: flex;
+	justify-content: space-between;
 }
-.n3{
-  margin-top: 60%;
+#contact-form input,
+textarea {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid;
 }
-.C1{
-  background-color: rgb(168, 219, 155);
-  text-align: center;
-    font-size: 400%;
-    margin-top: 100%;
+
+.container1 {
+	display: flex;
+	gap: 5px;
+}
+.container1 div {
+	width: 50%;
+}
+
+.container1 p {
+	text-align: left;
+	margin: 20px 0;
+	font-size: 20px;
+}
+#sec2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+	.col-25,
+	.col-75,
+	input[type="submit"] {
+		width: 100%;
+		margin-top: 0;
+	}
+	#phase1 {
+		/* padding: 60px; */
+		text-align: center;
+		text-rendering: optimizeLegibility;
+		text-align: justify;
+	}
+	img {
+		padding: 100px;
+		width: 300px;
+		border-radius: 200px;
+	}
+	.container1{
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
 }

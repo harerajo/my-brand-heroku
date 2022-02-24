@@ -4,13 +4,13 @@
 function addUser(e) {
 	const email = document.getElementById("email").value;
 	const password = document.getElementById("password").value;
-	const first_name = document.getElementById("fname").value;
+	const name = document.getElementById("name").value;
 	auth
 		.createUserWithEmailAndPassword(email, password)
 		.then((userCredential) => {
 			const user = userCredential.user;
 			// alert("User created successfully")
-			saveUserProfile({ first_name, email });
+			saveUserProfile({ name, email });
 			// window.location.href = "./index.html";
 		})
 		.catch((error) => {
@@ -25,6 +25,7 @@ function addUser(e) {
 function loginUser() {
 	const email = document.getElementById("email").value;
 	const password = document.getElementById("password").value;
+	console.log(email, password);
 	auth
 		.signInWithEmailAndPassword(email, password)
 		.then((userCredential) => {
@@ -42,17 +43,17 @@ function loginUser() {
 /*
  @role save user profile
 */
-function saveUserProfile({ first_name, email }) {
+function saveUserProfile({ name, email }) {
 	db.collection("users")
 		.doc()
 		.set({
-			first_name,
+			name,
 			email,
 			created_at: new Date(),
 		})
 		.then(() => {
 			alert("You successfully created account");
-			window.location.href = "./jona.html";
+			window.location.href = "./dashboard.html";
 		})
 		.catch((error) => {
 			alert(error?.message || "An error occurred");

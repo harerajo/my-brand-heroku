@@ -6,55 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="/styles/jojo.css">
-    <link rel="stylesheet" href="/styles/menu.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="menu-bar">
-        <ul>
-            <li>
-                <a href="jona.html">home</a>
-            </li>
-            <li>
-                <a href="aboutus.html">about us</a>
-            </li>
-            <li class="active">
-                <a href="contact.html">contact</a>
-            </li>
-
-            <li>
-                <a href="blogs.html">blogs</a>
-            </li>
-            <li>
-                <a href="login.html">login</a>
-            </li>
-        </ul>
-    </div>
+    <header>
+        <div class="header-container">
+            <nav class="menu-bar">
+                <div class="logo">
+                    <img class="logo-img" src="../images/logo.jpg">
+                </div>
+                <div class="nav-bar">
+                    <ul>
+                        <li class="active">
+                            <a href="jona.html">home</a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html">about</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">contact</a>
+                        </li>
+                        <li>
+                            <a href="blogs.html">blogs</a>
+                        </li>
+                        <li>
+                            <a href="login.html">login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
     <h1>Sign Up</h1>
-
-    <div class="mukwano">
-        <!-- <form action="mukwano decides here"> -->
-        <!-- <br><br>
-            <p>&nbsp;&nbsp; First name* <input type="text" required></p><br>
-            <p>&nbsp;&nbsp; Last name* <input type="text" name="Lastname" id="" required></p><br>
-            <p>&nbsp;&nbsp; Email* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="Email" id=""
-                    required></p><br>
-            <p>&nbsp;&nbsp; Password* &nbsp;<input type="password" required></p><br>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button id="ibuto">Create Account </button> </p><br>
-            <p id="btn"><input type="checkbox"> By signing up you agree to our Terms, Data <br>Policy and Cookies Policy
-            </p><br>
-            <br><br><br> -->
-        <!-- </form> -->
+    <!-- <div class="mukwano">
         <form id="signup-form" action="javascript:void(0);" onsubmit="addUser()">
-            <label for="name" id="nlabel">name</label><br>
-            <input type="text" id="fname" placeholder="John Doe" autocomplete="off"><br>
-            <label for="email" id="elaber">Email</label> <br>
+            <label for="name" id="nlabel">name</label>
+            <input type="text" id="fname" placeholder="jonathan" autocomplete="off"><br>
+            <label for="email" id="elaber">Email</label>
             <input type="email" id="email" placeholder="example@gmail.com"> <br>
-            <label for="password" id="plabel"></label>Password</label><br>
+            <label for="password" id="plabel"></label>Password</label>
             <input type="password" name="password" id="password"> <br>
             <button type="submit" id="btn">Sign Up </button>
+        </form>
+    </div> -->
+
+    <div class="signup-container">
+        <div class="signin-instead">
+            <img class="splash-img" src="../images/logo.jpg">
+            <h2 style="text-align: center;">Already have an account?</h2>
+            <p class="get-started">Sign in by clicking the link below</p>
+            <big color="red"></big><a class="signin-button" href="login.html"> Sign in</a></big>
+        </div>
+        <form action="javascript:void(0);" onsubmit="addUser()">
+            <h3 align="center">We are happy to have you!</h3>
+            <fieldset>
+                <input id="name" type="text" placeholder="name" autocomplete="off" />
+                <legend><label for="email">full names</label></legend>
+            </fieldset>
+            <fieldset>
+                <input id="email" type="email" placeholder="email" autocomplete="off" />
+                <legend><label for="email">email</label></legend>
+            </fieldset>
+            <fieldset>
+                <input id="password" type="password" placeholder="password" autocomplete="off" />
+                <legend><label for="password">password</label></legend>
+            </fieldset>
+            <button type="submit"><a href="/pages/dashboard.html"></a>Sign Up</button>
         </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>

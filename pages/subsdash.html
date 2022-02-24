@@ -30,30 +30,30 @@
         <!-- <a href="#"><i class="fa fa-desktop"></i><span>Dashboard</span></a> -->
         <a href="profiledash.html"><i class="fa fa-user"></i><span>Profile</span></a>
         <a href="#" class="active"><i class="fa fa-file-text"></i><span>Blogs</span></a>
-        <a href=""><i class="fa fa-comment"></i><span>User messages</span></a>
+        <a href="dashboard.html"><i class="fa fa-comment"></i><span>User messages</span></a>
         <!-- <a href="#"><i class="fa fa-user-circle"></i><span>users</span></a> -->
-        <a href="subsdash.html"><i class="fa fa-bell"></i><span>Subscribers</span></a>
+        <a href="#"><i class="fa fa-bell"></i><span>Subscribers</span></a>
 
-    </div>  
+    </div>
     <!-- <div class="contents">
 <form id="add-data-querries"></form>
 <ul id="user-list"></ul>
     </div> -->
-  
-    <div class="content" id="table-contents">
+
+    <div class="content" id="Subscribers-list">
         <div class="users">
             <table>
                 <thead>
                     <tr>
-                        <td>Sender </td>
+                        <td id="sub-name">subscriber</td>
                         <!-- <td>sender email</td> -->
-                        <td>Message</td>
+                        <!-- <td>Message</td>
                         <td>Update</td>
-                        <td>Delete</td>
+                        <td>Delete</td> -->
                     </tr>
                 </thead>
                 <tbody id="t-body">
-                   <!-- <tr>
+                    <!-- <tr>
 
                         <td>32</td>
                         <td><a href="#"><div class="popup" onclick="myFunction()"><i class="fa fa-pencil">
@@ -61,18 +61,19 @@
                         </div></a></td>
                         <td><a href="#"><i class="fa fa-trash"></i></a></td>
                     </tr> -->
-                </tbody> 
+                </tbody>
             </table>
         </div>
-    </div>  
-   <script>
-</script>
-<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-<script src="../scripts/firebase.js"></script>
-<script src="../scripts/auth.js"></script>
-<script src="../scripts/contact.js"></script>
-<script src="../scripts/sample.js"></script>
+    </div>
+    <script>
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    <script src="../scripts/firebase.js"></script>
+    <script src="../scripts/auth.js"></script>
+    <script src="../scripts/contact.js"></script>
+    <script src="../scripts/subscribe.js"></script>
 </body>
+
 </html>

@@ -1,3 +1,6 @@
+:root {
+	--green: #1a9c03;
+}
 body {
 	background-color: rgb(219, 223, 186);
 }
@@ -20,12 +23,134 @@ h1 {
 	margin-left: 110px;
 }
 #btn {
-	margin-left: 10%;
+	padding: 5px 15px;
 }
 input {
 	margin-left: 13%;
 	align-items: center;
+	margin-bottom: 20px;
+	padding: 3px 10px;
 }
 #on {
 	margin-top: 5%;
+}
+
+#signup-form {
+	padding: 20px;
+	text-transform: capitalize;
+}
+
+
+/* Full-width inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+
+/* Set a style for all buttons */
+button {
+	cursor: pointer;
+	width: 40%;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+/* Add a hover effect for buttons */
+input[type="submit"]:hover {
+	opacity: 0.6;
+}
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+
+form {
+	border: 1px solid #a08c8c;
+	width: 400px;
+	padding: 30px;
+	border-radius: 20px;
+}
+.signup-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0;
+	gap: 100px;
+	flex-wrap: wrap;
+}
+
+fieldset {
+	--base-ratio: 4px;
+	font-family: monospace;
+	border: none;
+}
+
+input::placeholder {
+	opacity: 0;
+}
+
+legend {
+	margin-left: calc(2 * var(--base-ratio) + 10px);
+	transform: translateY(calc(100% + 5 * var(--base-ratio) + 1px));
+	background: transparent;
+	transition: all 0.75s ease;
+	font-weight: 900;
+}
+
+input:not(:placeholder-shown) ~ legend {
+	color: var(--green);
+	background: white;
+	transform: translateY(90%);
+}
+
+label {
+	cursor: text;
+	font-size: var(--typography-size);
+	text-transform: capitalize;
+	transition: font-size 0.75s ease;
+}
+
+input:not(:placeholder-shown) ~ legend > label {
+	font-size: calc(var(--typography-size) * 0.9);
+}
+
+/* Just for demo */
+
+.title {
+	font-size: 24px;
+	margin: 8px;
+}
+
+.signin-instead {
+	box-shadow: 0px 0px 20px 1px rgb(218 218 218);
+	padding: 20px;
+}
+
+.signin-button {
+	padding: 10px 50px;
+	border: 1px solid var(--green);
+	display: block;
+	border-radius: 20px;
+	width: fit-content;
+	text-decoration: none;
+	color: var(--green);
+}
+
+.signin-button:hover {
+	background-color: var(--green);
+	color: white;
+	transition: 0.7s;
+}
+
+.get-started {
+	color: gray;
+	margin: 10px auto;
 }

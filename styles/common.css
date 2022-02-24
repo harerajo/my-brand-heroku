@@ -1,0 +1,39 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto";
+}
+
+body {
+	background-color: rgb(255, 255, 255);
+}
+
+input[type="submit"],
+button {
+	background-color: #1a9c03;
+	color: white;
+	border: 2px solid #1a9c03;
+	font-size: 18px;
+	cursor: pointer;
+	transition: .7s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+	background-color: white;
+	color: #1a9c03;
+}
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		padding: 0 10px;
+	}
+}
