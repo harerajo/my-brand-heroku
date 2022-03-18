@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROFILE</title>
+    <title>QUERIES</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/profile-dashboard.css">
+    <link rel="stylesheet" href="../styles/queries-dashboard.css">
 </head>
-<body>
+
+<body>    
     <input type="checkbox" id="check">
     <header>
         <label for="check">
@@ -23,33 +25,32 @@
     </header>
     <div class="side_bar">
         <center>
-            <img src="../images/logo.jpg" class="profile_image">
+            <img src="../images/WhatsApp Image 2022-01-30 at 6.11.04 PM.jpeg" class="profile_image">
         </center>
+
         <a href="profiledash.html"><i class="fa fa-user"></i><span>Profile</span></a>
         <a href="blogs-dashboard.html" class="active"><i class="fa fa-file-text"></i><span>Blogs</span></a>
         <a href="queries-dashboard.html"><i class="fa fa-comment"></i><span>User messages</span></a>
         <a href="subscribers-dashboard.html"><i class="fa fa-bell"></i><span>Subscribers</span></a>
-    </div>
+
+    </div>   
     <div class="content" id="table-contents">
         <div class="users">
-        <img id="profile-image" src="/images/jonathan photo.jpeg">
-        <p id="name-under-profile">jonathan HARERIMANA</p><br>
-        <p id="email-under-profile"><a href="">harerajo10@gmail.com</a> </p>
-        <div class="user-desc">
-                    <div class="profile">Names:HARERIMANA Jonathan </div><br><br>
-                    <div class="profile">DOB: 1/JAN/1990 </div><br><br>
-                    <div class="profile">Nationality:RWANDA</div><br><br>
-                    <div class="profile">Address:kigali</div><br>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Sender </td>
+                        <td>Message</td>
+                    </tr>
+                </thead>
+                <tbody id="t-body">
 
-                </div>
-       
+                </tbody> 
+            </table>
         </div>
-    </div>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-    <script src="../scripts/firebase.js"></script>
-    <script src="../scripts/auth.js"></script>
-    <script src="../scripts/contact.js"></script>
+    </div>  
+   <script>
+</script>
+<script src="../scripts/blogs.js"></script>
 </body>
 </html>
