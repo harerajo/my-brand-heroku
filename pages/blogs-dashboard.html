@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/blogs-dashboard.css">
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <header>
+        <label for="check">
+            <i class="fa fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <h3>user <span>dashboard</span></h3>
+        </div>
+        <div class="right_area">
+            <a href="/pages/login.html" class="logout_btn">Log out</a>
+        </div>
+    </header>
+    <div class="side_bar">
+        <center>
+            <img src="../images/logo.jpg" class="profile_image">
+        </center>
+        <a href="profiledash.html"><i class="fa fa-user"></i><span>Profile</span></a>
+        <a href="blogs-dashboard.html" class="active"><i class="fa fa-file-text"></i><span>Blogs</span></a>
+        <a href="queries-dashboard.html" onclick="viewQueries()"><i class="fa fa-comment"></i><span>User messages</span></a>
+        <a href="subscribers-dashboard.html" ><i class="fa fa-bell"></i><span>Subscribers</span></a>
+    </div>
+    <div class="content" id="blogs-list">
+        <div class="users">
+            <table>
+                <thead>
+                    <tr>
+                        <td id="blog-name">title</td>
+                        <td id="blog-name">author</td>
+                        <td id="blog-name">contents</td>
+                        <td id="blog-name">comments</td>
+                    </tr>
+                </thead>
+                <tbody id="t-body">
+                </tbody>
+            </table>
+    
+        </div>
+        <div id="popupmessage"></div>
+    </div>
+
+
+
+
+
+    <!-- <div class="content" id="table-contents">
+        <div class="blog1">
+            <p>
+                <li><a href="blogs.html"><u>Title:</u> top 10 habits of developers</a></li>
+                <li><u>Author:</u> Jonathan HARERIMANA</li>
+                <li>Comments: 5</p></li>
+                <li><i class="fa fa-pencil" ></i></li>
+                <li><i class="fa fa-trash"></i></li>
+        </div>
+        <div class="blog1">
+            <p>
+                <li><u>Title:</u>You are open to new things.</li>
+                <li><u>Author:</u> Jonathan HARERIMANA</li>
+                <li>Comments: 3
+            </p>
+            </li>
+            <li><i class="fa fa-pencil"></i></li>
+            <li><i class="fa fa-trash"></i></li>
+        </div>
+        <div class="blog1">
+            <p>
+                <li><u>Title:</u> debates about climate change</li>
+                <li><u>Author:</u> Jonathan HARERIMANA</li>
+                <li>Comments: 6
+            </p>
+            </li>
+            <li><i class="fa fa-pencil"></i></li>
+            <li><i class="fa fa-trash"></i></li>
+        </div>
+        <div class="blog1">
+            <p>
+                <li><u>Title:</u> top 10 habits of developers</li>
+                <li><u>Author:</u> Jonathan HARERIMANA</li>
+                <li>Comments: 1
+            </p>
+            </li>
+            <li><i class="fa fa-pencil"></i></li>
+            <li><i class="fa fa-trash"></i></li>
+        </div>
+    </div> -->
+    <script src="../scripts/auth.js"></script>
+    <script src="../scripts/blogs.js"></script>
+</body>
+</html>

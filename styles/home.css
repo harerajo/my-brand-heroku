@@ -1,6 +1,3 @@
-/* body {
-	background-color: rgb(212, 48, 48);
-} */
 img {
 	padding: 50px;
 	width: 300px;
@@ -8,31 +5,23 @@ img {
 }
 
 .gallery {
-	/* background-color: red; */
 	display: flex;
 	flex-direction: column;
 	border: 1px solid black;
 	margin-right: 10px;
 }
 .gallery img {
-	/* background-color: red; */
-	/* margin-top: -50px; */
 	width: 400px;
 	border-radius: 10px;
 }
 .cards {
-	/* margin-left: -60px; */
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
 }
-
 .part1 {
-	/* margin-top: 60px; */
 	display: flex;
 }
 section {
-	/* background-color: rgb(140, 17, 15); */
 	margin: 10px 0;
 }
 h3 {
@@ -41,30 +30,21 @@ h3 {
 	font-size: 24px;
 }
 .hi {
-	/* text-align: justify;
-	width: 30%;
-	margin-left: 30%; */
 	font-weight: lighter;
 	margin-top: 100px;
-	/* font-size: 80%; */
 }
 .p1 {
-	/* color: #52a840; */
 	margin-left: 30%;
 	font-size: 300%;
 	margin-top: 9%;
 }
 .s-home {
-	/* background-color: rgb(246, 236, 188); */
 	text-align: center;
 	font-size: 400%;
-	/* margin-top: 17%; */
 }
 .gallery {
-	/* background-color: brown; */
 	align-items: center;
 	margin-top: 6%;
-	/* margin-left: 30%; */
 	float: left;
 	width: 390px;
 	height: 20%;
@@ -81,7 +61,6 @@ h3 {
 	margin-top: 30%;
 }
 .B1 {
-	/* background-color: rgb(168, 219, 155); */
 	text-align: center;
 	font-size: 400%;
 	margin-top: 70%;
@@ -93,7 +72,6 @@ h3 {
 	margin-top: 60%;
 }
 .contact-title {
-	/* background-color: rgb(168, 219, 155); */
 	text-align: center;
 	font-size: 400%;
 }
@@ -106,7 +84,6 @@ h3 {
 	text-decoration: none;
 	color: #fff;
 }
-
 /* CONTACT SECTION */
 #contact-form {
 	font-size: 18px;
@@ -147,27 +124,5 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 }
-@media screen and (max-width: 600px) {
-	.col-25,
-	.col-75,
-	input[type="submit"] {
-		width: 100%;
-		margin-top: 0;
-	}
-	#phase1 {
-		/* padding: 60px; */
-		text-align: center;
-		text-rendering: optimizeLegibility;
-		text-align: justify;
-	}
-	img {
-		padding: 100px;
-		width: 300px;
-		border-radius: 200px;
-	}
-	.container1{
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	
-}
+
+

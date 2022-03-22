@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../styles/header.css" />
   <link rel="stylesheet" href="../styles/footers.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/popup.css">
 </head>
 
 <body>
@@ -85,6 +86,14 @@
           <li><a href="contact.html">contact </a></li>
         </ul>
       </li>
+      <div id="right">
+        <form name="subscribe-form" action="javascript:void(0);" onsubmit="subscribe()">
+          <input class="inptfld" name="name" placeholder=" Your name" type="text">
+          <input class="inptfld" name="email" placeholder=" Your Email" type="text">
+          <button onclick="popup()"> <input class="subscribebtn" type="submit"></button>
+          <div id="popupmessage">thanks for subcribing</div>
+        </form>
+      </div>
       <li class="adress">
         <h2>adress</h2>
         <ul class="box">
@@ -100,6 +109,7 @@
       <p>all righths reserved &copy;johnny 2022</p>
     </div>
   </footer>
+  <script src="../scripts/subscribe.js"></script>
 </body>
 
 </html>

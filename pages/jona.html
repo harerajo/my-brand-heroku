@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/popup.css">
 </head>
 
 <body>
@@ -53,7 +54,6 @@
       Distinctio totam natus rem animi quasi eum aliquid consequuntur itaque at!
     </h1>
     <img src="../images/jonathan photo.jpeg" />
-    <!-- <p >welcome to my blog page lots to explore</p> -->
   </section>
   <section id="sec2a" class="container">
     <div class="s-home">Skills</div>
@@ -156,6 +156,7 @@
         <input type="text" id="sender-email" name="email" placeholder="Email" />
         <textarea id="sender-message" name="message" placeholder="Message" cols="40" rows="5"></textarea>
         <input type="submit" value="Submit" />
+        <div id="popupmessage">message sent successfully</div>
       </form>
     </div>
   </section>
@@ -173,8 +174,10 @@
       </li>
       <div id="right">
         <form name="subscribe-form" action="javascript:void(0);" onsubmit="subscribe()">
-          <input class="inptfld" name="email" placeholder=" Your Email" type="text">
+          <input class="inptfld" id="names" name="name" placeholder=" Your name" type="text">
+          <input class="inptfld" id="Email" name="email" placeholder=" Your Email" type="text">
           <input class="subscribebtn" type="submit">
+          <div id="popupmessage">thanks for subcribing</div>
         </form>
       </div>
       <li class="adress">
@@ -192,11 +195,6 @@
       <p>all righths reserved &copy;johnny 2022</p>
     </div>
   </footer>
-
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-  <script src="../scripts/firebase.js"></script>
   <script src="../scripts/auth.js"></script>
   <script src="../scripts/contact.js"></script>
   <script src="../scripts/subscribe.js"></script>

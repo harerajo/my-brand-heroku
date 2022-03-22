@@ -7,6 +7,7 @@ function popup(message) {
 		x.className = x.className.replace("show", "");
 	}, 3000);
 }
+
 async function addUser(e) {
 	const email = document.getElementById("email").value;
 	const password = document.getElementById("password").value;
@@ -35,37 +36,32 @@ async function addUser(e) {
 			console.log(err);
 		});
 }
-function loginUser() {
+
+async function loginUser() {
 	const email = document.getElementById("email").value;
 	const password = document.getElementById("password").value;
 	console.log(email, password);
-	auth
-		.signInWithEmailAndPassword(email, password)
-		.then((userCredential) => {
-			const user = userCredential.user;
-			localStorage.setItem("user", JSON.stringify(user));
-			window.location.href = "./dashboard.html";
-		})
-		.catch((error) => {
-			const errorCode = error.code;
-			const errorMessage = error?.message;
-			alert(errorMessage || "An error occurred");
-		});
-}
 
-function saveUserProfile({ name, email }) {
-	db.collection("users")
-		.doc()
-		.set({
-			name,
-			email,
-			created_at: new Date(),
+	let error = null;
+	let url = "http://localhost:4000/api";
+	await fetch(url + "/auth/login", {
+		method: "POST",
+		headers: { "Content-type": "application/json; charset=UTF-8" },
+		body: JSON.stringify({ email, password }),
+	})
+		.then((res) => res.json())
+		.then((response) => {
+			if (response.status !== 200) {
+				error = response.error || response.message;
+				document.getElementById("error").innerHTML = error;
+			}
+			if (response.status == 200) {
+				error = response.error;
+				localStorage.setItem("token", response.data.token);
+				window.location.href = "./profiledash.html";
+			}
 		})
-		.then(() => {
-			alert("You successfully created account");
-			window.location.href = "./dashboard.html";
-		})
-		.catch((error) => {
-			alert(error?.message || "An error occurred");
+		.catch((err) => {
+			console.log(err);
 		});
 }

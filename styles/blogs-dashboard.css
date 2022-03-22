@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-/* background-color: ; */
+	/* background-color: ; */
 	font-family: "roboto", sans-serif;
 }
 header {
@@ -39,7 +39,7 @@ header {
 	background: #000000;
 	/* margin-top: 50px; */
 	padding-top: 30px;
-	position: fixed;
+	position: absolute;
 	left: 0;
 	width: 250px;
 	height: 100%;
@@ -162,81 +162,61 @@ tbody {
 
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-ul{
-    list-style-type: none;
-    padding: 0;
+
+li {
+	list-style: none;
+	padding: 20px;
+	/* background: #f6f6f6; */
+	font-size: 20px;
+	color: #555;
+	position: relative;
+	/* border-bottom: 1px solid #5f2121; */
+	height: 46px;
 }
-li{
-    padding: 20px;
-    background: #f6f6f6;
-    font-size: 20px;
-    color: #555;
-    position: relative;
-    border-bottom: 1px solid #5f2121;
-    height: 46px;
-}
-li:hover{
-	color: #5f2121;
-	cursor:pointer;
+li:hover {
+	color: #00b185;
+	cursor: pointer;
 }
 
-#profile-content{
+#profile-content {
 	display: flex;
 	justify-content: center;
 	color: #000000;
 	align-items: center;
 }
-/* .user-desc{
-	display: flex;
-	flex-direction: column;
-	border: #555 solid;
-	justify-content: center;
-	margin-left: -170px;
-} */
-.users {
+
+.blog1 {
 	margin: 50px;
-	padding: 40px;
-	/* width: 400px; */
+	padding-top: 20px;
+	padding-bottom: 20px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: row;
-	justify-content:space-evenly;
 	border: solid rgb(7, 6, 6);
 	border-radius: 9px;
 	height: fit-content;
-	background-color: #c0b3b3;
+	background-color: #ffffff;
 	border-width: 10px solid;
 	flex-wrap: wrap;
-	/* border-top: #1dc4e7 solid; */
-	
 }
-.users #profile-image{
-	display: flex;
-	flex-direction: column;
-	height: 280px;
-	border-radius: 30px;
-	border: #1dc4e7 solid;
-}
-.user-desc{
-padding: 50px;
+
+.user-desc {
+	padding: 50px;
 	border-left: solid rgb(148, 150, 148);
 	height: 200px;
-	
 }
-#name-under-profile{
+#name-under-profile {
 	font-size: 20px;
 	font-weight: 900;
 	color: rgb(43, 68, 31);
 	text-transform: capitalize;
 }
-#email-under-profile{
+#email-under-profile {
 	text-decoration: none;
-    color: rgb(43, 68, 31);
+	color: rgb(43, 68, 31);
 }
-.profile{
+.profile {
 	border-bottom: rgb(158, 150, 150) solid;
 }
-td #sub-name{
+td #sub-name {
 	width: 100px;
 }

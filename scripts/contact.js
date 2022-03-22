@@ -1,19 +1,42 @@
-function sendQuery() {
-	const form = document.forms["contact-form"];
-	const { names, email, message } = form;
-	db.collection("queries")
-		.doc()
-		.set({
-			names: names.value,
-			email: email.value,
-			message: message.value,
-			created_at: new Date(),
+async function sendQuery() {
+	const name = document.getElementById("sender-name").value;
+	const email = document.getElementById("sender-email").value;
+	const query = document.getElementById("sender-message").value;
+
+
+	let url = "http://locahost:4000";
+	await fetch(url + "/queries", {
+		method: "POST",
+		headers: { "Content-type": "application/json; charset=UTF-8" },
+		body: JSON.stringify({ name, email, query }),
+	})
+
+		.then((res) => res.json())
+			.then((response) => {
+			if (response.status !== 200) {
+
+			}
+			console.log(response);
 		})
-		.then(() => {
-			alert("You successfully sent your message");
+		
+	}
+
+	async function viewAllQueries() {
+
+
+		let url = "https://johhny-brand-staging.herokuapp.com/api";
+		await fetch(url + "/queries", {
+			method: "GET",
+			headers: { "Content-type": "application/json; charset=UTF-8" },
+
 		})
-		.catch((error) => {
-			alert(error?.message || "An error occurred");
-		});
-}
+			.then((res) => res.json())
+			.then((response) => {
+				if (response.status !== 200) {
+				}
+				console.log(response);
+			});
+	}
+
+
 
