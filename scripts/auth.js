@@ -39,19 +39,31 @@ function loginUser() {
 	const email = document.getElementById("email").value;
 	const password = document.getElementById("password").value;
 	console.log(email, password);
-	auth
-		.signInWithEmailAndPassword(email, password)
-		.then((userCredential) => {
-			const user = userCredential.user;
-			localStorage.setItem("user", JSON.stringify(user));
-			window.location.href = "./dashboard.html";
+
+	let error = null;
+	let url = "http://localhost:4000/api";
+	await fetch(url + "/auth/login", {
+		method: "POST",
+		headers: { "Content-type": "application/json; charset=UTF-8" },
+		body: JSON.stringify({ email, password }),
+	})
+		.then((res) => res.json())
+		.then((response) => {
+			if (response.status !== 200) {
+				error = response.message;
+				document.getElementById("error").innerHTML = error;
+			}
+			if (response.status == 200) {
+				error = response.error;
+				localStorage.setItem("token", response.data.token);
+				window.location.href = "./profiledash.html";
+			}
 		})
-		.catch((error) => {
-			const errorCode = error.code;
-			const errorMessage = error?.message;
-			alert(errorMessage || "An error occurred");
+		.catch((err) => {
+			console.log(err);
 		});
 }
+  
 
 function saveUserProfile({ name, email }) {
 	db.collection("users")
@@ -63,7 +75,7 @@ function saveUserProfile({ name, email }) {
 		})
 		.then(() => {
 			alert("You successfully created account");
-			window.location.href = "./dashboard.html";
+			window.location.href = "./profiledash";
 		})
 		.catch((error) => {
 			alert(error?.message || "An error occurred");

@@ -52,8 +52,7 @@
     <form action="javascript:void(0);" onsubmit="loginUser()">
       <h3 align="center">We are happy to have you!</h3>
       <fieldset>
-        <input id="email" type="email" placeholder="email" autocomplete="off"
-          pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
+        <input id="email" type="email" placeholder="email" autocomplete="off" required />
         <legend><label for="email">email</label></legend>
       </fieldset>
       <fieldset>
@@ -61,16 +60,10 @@
         <legend><label for="password">password</label></legend>
       </fieldset>
       <p align="right"><a href="#">Forgot password?</a></p>
-      <button type="submit"><a href="/pages/dashboard.html"></a> Login</button>
+      <p id="error"></p>
+      <button type="submit"><a href="/pages/profiledash.html"></a> Login</button>
     </form>
   </div>
-
-
-
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-  <script src="../scripts/firebase.js"></script>
   <script src="../scripts/auth.js"></script>
 </body>
 

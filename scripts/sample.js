@@ -30,7 +30,7 @@ db.collection("queries")
 							doc.data().names +
 							"</td><td>" +
 							doc.data().message +
-							"</td><td><a href='#'><div class='popup'onclick='myFunction()'><i class='fa fa-pencil'><span class='popuptext' id='myPopup'></span></div></a></td> <td><a href='#'><i class='fa fa-trash'></i></a></td></tr>";
+							"</td></tr>";
 						document.getElementById("t-body").innerHTML += html;
 
 		});

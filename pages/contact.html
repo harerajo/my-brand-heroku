@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../styles/common.css">
   <link rel="stylesheet" href="../styles/header.css" />
   <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/popup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -54,36 +55,14 @@
       <p><i class="fa fa-map-marker"></i> Nyarugenge - KN 20 Ave</p>
     </div>
     <form id="contact-form" name="contact-form" action="javascript:void(0);" onsubmit="sendQuery()">
-      <input type="text" id="sender-name" name="names" placeholder="Full name" />
+      <input type="text" id="sender-name" name="name" placeholder="Full name" />
       <input type="text" id="sender-email" name="email" placeholder="Email" />
       <textarea id="sender-message" name="message" placeholder="Message" cols="40" rows="5"></textarea>
       <input type="submit" value="Submit" />
+      <div id="popupmessage"></div>
     </form>
   </div>
-  <!-- <div class="contact">
-
-    <div class="container1">
-      <div style="text-align: center">
-        <p class="subt">fill your credentials and leave out your</p>
-      </div>
-      <div class="row">
-        <div class="column"></div>
-        <div class="column">
-          <form action="/action_page.php">
-            <label for="fname">full name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." />
-            <label for="lname">email</label>
-            <input type="text" id="name" name="email" placeholder="exmple@gmail.com" />
-            <label for="subject">leave your message</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height: 170px">
-
-            </textarea>
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </div> --> <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
   <footer class="footer">
     <ul class="footer-right">
       <li class="features">
@@ -96,14 +75,14 @@
           <li><a href="contact.html">contact </a></li>
         </ul>
       </li>
-        <div id="right">
-          <form action="javascript:void(0);">
-            <input class="inptfld" name="email" placeholder=" Your Email" type="text">
-            <input name="uri" value="techkshetra" type="hidden">
-            <input name="loc" value="en_US" type="hidden">
-            <input class="subscribebtn" type="submit" >
-          </form>
-        </div>
+      <div id="right">
+        <form action="javascript:void(0);">
+          <input class="inptfld" name="email" placeholder=" Your Email" type="text">
+          <input name="uri" value="techkshetra" type="hidden">
+          <input name="loc" value="en_US" type="hidden">
+          <input class="subscribebtn" type="submit">
+        </form>
+      </div>
       <li class="adress">
         <h2>adress</h2>
         <ul class="box">
@@ -119,11 +98,8 @@
       <p>all righths reserved &copy;johnny 2022</p>
     </div>
   </footer>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-  <script src="../scripts/firebase.js"></script>
-  <script src="../scripts/auth.js"></script>
   <script src="../scripts/contact.js"></script>
+  <script src="../scripts/subscribe.js"></script>
 </body>
+
 </html>
