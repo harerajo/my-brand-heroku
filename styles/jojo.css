@@ -40,11 +40,11 @@ input {
 	text-transform: capitalize;
 }
 
-
 /* Full-width inputs */
 input[type="email"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+select {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -70,7 +70,6 @@ input[type="submit"]:hover {
 	text-align: center;
 	margin: 24px 0 12px 0;
 }
-
 
 form {
 	border: 1px solid #a08c8c;
@@ -153,4 +152,9 @@ input:not(:placeholder-shown) ~ legend > label {
 .get-started {
 	color: gray;
 	margin: 10px auto;
+}
+
+#error {
+	color: red;
+	padding: 10px;
 }

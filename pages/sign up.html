@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="/styles/jojo.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/popup.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
@@ -42,17 +43,6 @@
         </div>
     </header>
     <h1>Sign Up</h1>
-    <!-- <div class="mukwano">
-        <form id="signup-form" action="javascript:void(0);" onsubmit="addUser()">
-            <label for="name" id="nlabel">name</label>
-            <input type="text" id="fname" placeholder="jonathan" autocomplete="off"><br>
-            <label for="email" id="elaber">Email</label>
-            <input type="email" id="email" placeholder="example@gmail.com"> <br>
-            <label for="password" id="plabel"></label>Password</label>
-            <input type="password" name="password" id="password"> <br>
-            <button type="submit" id="btn">Sign Up </button>
-        </form>
-    </div> -->
 
     <div class="signup-container">
         <div class="signin-instead">
@@ -71,17 +61,19 @@
                 <input id="email" type="email" placeholder="email" autocomplete="off" />
                 <legend><label for="email">email</label></legend>
             </fieldset>
+            <select id="role" type="text" placeholder="Role" autocomplete="off">
+                <option value="visitor">visitor</option>
+                <option value="admin">admin</option>
+            </select>
             <fieldset>
                 <input id="password" type="password" placeholder="password" autocomplete="off" />
                 <legend><label for="password">password</label></legend>
             </fieldset>
+            <p id="error"></p>
             <button type="submit"><a href="/pages/dashboard.html"></a>Sign Up</button>
         </form>
+        <div id="popupmessage"></div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-    <script src="../scripts/firebase.js"></script>
     <script src="../scripts/auth.js"></script>
 </body>
 
