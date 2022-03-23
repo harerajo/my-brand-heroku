@@ -110,7 +110,7 @@
   </div>
   <div class="blog-end">
     <div class="comment">
-        <textarea id="name" name="subject" placeholder="your name" size="5" minlength="500"></textarea>
+      <textarea id="name" name="subject" placeholder="your name" size="5" minlength="500"></textarea>
       <textarea id="comment" name="subject" placeholder="Leave your comment here" size="5" minlength="500"></textarea>
     </div>
     <input class="blogbtn" type="submit" value="Submit" />
@@ -128,6 +128,14 @@
           <li><a href="contact.html">contact </a></li>
         </ul>
       </li>
+      <div id="right">
+        <form name="subscribe-form" action="javascript:void(0);" onsubmit="subscribe()">
+          <input class="inptfld" name="name" placeholder=" Your name" type="text">
+          <input class="inptfld" name="email" placeholder=" Your Email" type="text">
+          <input class="subscribebtn" type="submit" value="Subcribe">
+          <div id="popupmessage"></div>
+        </form>
+      </div>
       <li class="adress">
         <h2>adress</h2>
         <ul class="box">

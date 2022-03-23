@@ -55,9 +55,10 @@
       <p><i class="fa fa-map-marker"></i> Nyarugenge - KN 20 Ave</p>
     </div>
     <form id="contact-form" name="contact-form" action="javascript:void(0);" onsubmit="sendQuery()">
-      <input type="text" id="sender-name" name="name" placeholder="Full name" />
-      <input type="text" id="sender-email" name="email" placeholder="Email" />
+      <input type="text" id="sender-name" name="name" placeholder="Full name" required/>
+      <input type="text" id="sender-email" name="email" placeholder="Email" required/>
       <textarea id="sender-message" name="message" placeholder="Message" cols="40" rows="5"></textarea>
+      <p id="error"></p>
       <input type="submit" value="Submit" />
       <div id="popupmessage"></div>
     </form>
@@ -76,11 +77,11 @@
         </ul>
       </li>
       <div id="right">
-        <form action="javascript:void(0);">
+        <form name="subscribe-form" action="javascript:void(0);" onsubmit="subscribe()">
+          <input class="inptfld" name="name" placeholder=" Your name" type="text">
           <input class="inptfld" name="email" placeholder=" Your Email" type="text">
-          <input name="uri" value="techkshetra" type="hidden">
-          <input name="loc" value="en_US" type="hidden">
-          <input class="subscribebtn" type="submit">
+          <input class="subscribebtn" type="submit" value="Subcribe">
+          <div id="popupmessage"></div>
         </form>
       </div>
       <li class="adress">
