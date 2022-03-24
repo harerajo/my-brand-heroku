@@ -15,12 +15,12 @@ async function sendQuery() {
 
 	const name = document.getElementById("sender-name").value;
 	const email = document.getElementById("sender-email").value;
-	const query = document.getElementById("sender-message").value;
+	const queries = document.getElementById("sender-message").value;
 
 	await fetch(url + "/queries", {
 		method: "POST",
 		headers: { "Content-type": "application/json; charset=UTF-8" },
-		body: JSON.stringify({ name, email, query }),
+		body: JSON.stringify({ name, email, queries }),
 	})
 		.then((res) => res.json())
 		.then((response) => {
@@ -38,7 +38,7 @@ async function viewAllQueries() {
 	let url = "https://johhny-brand-staging.herokuapp.com/api";
 
 	let token = localStorage.getItem("token");
-	await fetch(url + "/subscription/subscribers", {
+	await fetch(url + "/queries", {
 		method: "GET",
 		headers: {
 			"Content-ype": "application/json; charset=UTF-8",
@@ -47,10 +47,11 @@ async function viewAllQueries() {
 	})
 		.then((response) => response.json())
 		.then((res) => {
-			res.data?.subscribers.forEach((item) => {
+			res.data?.queries.forEach((item) => {
 				const tBody = document.getElementById("t-body");
 				let email = document.createElement("td");
 				let name = document.createElement("td");
+				let query = document.createElement("td");
 				let row = document.createElement("tr");
 				let rowContent = document.createElement("p");
 				rowContent.setAttribute("class", "row-content");
@@ -59,15 +60,20 @@ async function viewAllQueries() {
 
 				email.setAttribute("class", "email");
 				name.setAttribute("class", "name");
+				query.setAttribute("class", "queries");
+				
 
 				let emailvalue = document.createTextNode(item.email);
 				let namevalue = document.createTextNode(item.name);
+				let queryvalue = document.createTextNode(item.query);
 
 				email.appendChild(emailvalue);
 				name.appendChild(namevalue);
+				query.appendChild(queryvalue);
 
 				row.appendChild(name);
 				row.appendChild(email);
+				row.appendChild(query);
 
 				tBody.appendChild(row);
 			});
@@ -78,7 +84,7 @@ async function viewOneQuery(item) {
 	let url = "https://johhny-brand-staging.herokuapp.com/api";
 
 	let token = localStorage.getItem("token");
-	await fetch(url + "/subscription/subscribers", {
+	await fetch(url + `/queries/:${id}`, {
 		method: "GET",
 		headers: {
 			"Content-ype": "application/json; charset=UTF-8",
@@ -101,5 +107,27 @@ async function viewOneQuery(item) {
 					content.style.display = "block";
 				}
 			});
+		});
+}
+
+async function deleteQuery(id) {
+	let url = "https://johhny-brand-staging.herokuapp.com/api";
+	const token = localStorage.getItem("token");
+	await fetch(url + `/queries/:${id}`, {
+		method: "DELETE",
+		headers: {
+			"Content-ype": "application/json; charset=UTF-8",
+			token: token,
+		},
+	})
+		.then((res) => res.json())
+		.then((response) => {
+			if (response.status !== 201) {
+				document.getElementById("error").innerHTML =
+					response.error || response.message;
+			}
+			if (response.status == 201) {
+				popup(response.message);
+			}
 		});
 }
