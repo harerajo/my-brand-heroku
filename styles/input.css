@@ -1,0 +1,50 @@
+:root {
+	--green: #1a9c03;
+}
+
+/* INPUT FIELD */
+fieldset {
+	--base-ratio: 4px;
+	font-family: monospace;
+	border: none;
+}
+
+input::placeholder {
+	opacity: 0;
+}
+
+legend {
+	margin-left: calc(2 * var(--base-ratio) + 10px);
+	transform: translateY(calc(100% + 5 * var(--base-ratio) + 1px));
+	background: transparent;
+	transition: all 0.75s ease;
+	font-weight: 900;
+}
+
+input:not(:placeholder-shown) ~ legend {
+	color: var(--green);
+	background: white;
+	transform: translateY(90%);
+}
+
+label {
+	cursor: text;
+	font-size: var(--typography-size);
+	text-transform: capitalize;
+	transition: font-size 0.75s ease;
+}
+
+input:not(:placeholder-shown) ~ legend > label {
+	font-size: calc(var(--typography-size) * 0.9);
+}
+
+/* Full-width inputs */
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 20px;
+}

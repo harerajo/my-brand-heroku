@@ -1,12 +1,9 @@
-let url = "http://localhost:4000/api";
-
-const userlist = document.querySelector("#Subscribers-list");
+localStorage.getItem("token") && allSubscribers();
 
 async function subscribe() {
-	const name = document.getElementById("names").value;
-	const email = document.getElementById("Email").value;
-
-
+	const name = document.forms["subscribe-form"]["name"].value;
+	const email = document.forms["subscribe-form"]["email"].value;
+	let url = "https://johhny-brand-staging.herokuapp.com/api";
 	await fetch(url + "/subscription/subscribe", {
 		method: "POST",
 		headers: {
@@ -16,11 +13,17 @@ async function subscribe() {
 		body: JSON.stringify({ name, email }),
 	})
 		.then((res) => res.json())
-		.then((response) => popup(response.message));
+		.then((response) => {
+			if (response.status == 200) {
+				popup(response.message);
+			}
+			if (response.status !== 200) {
+				popup(response.error || response.message);
+			}
+		});
 }
 
 function popup(message) {
-
 	var x = document.getElementById("popupmessage");
 	x.textContent = message;
 
@@ -31,6 +34,7 @@ function popup(message) {
 }
 
 async function allSubscribers() {
+	let url = "https://johhny-brand-staging.herokuapp.com/api";
 	let token = localStorage.getItem("token");
 	await fetch(url + "/subscription/subscribers", {
 		method: "GET",
@@ -41,8 +45,7 @@ async function allSubscribers() {
 	})
 		.then((response) => response.json())
 		.then((res) => {
-			popup(res.message);
-			res.data.subscribers.forEach((item) => {
+			res.data.subscribers.forEach(() => {
 				const tBody = document.getElementById("t-body");
 				let email = document.createElement("td");
 				let name = document.createElement("td");
@@ -64,5 +67,3 @@ async function allSubscribers() {
 			});
 		});
 }
-
-allSubscribers();
