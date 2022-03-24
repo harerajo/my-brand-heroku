@@ -2,9 +2,9 @@
 	box-sizing: border-box;
 }
 
-input[type="text"],
-select,
-textarea {
+#contact-form input[type="text"],
+#contact-form select,
+#contact-form textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
@@ -30,7 +30,7 @@ input[type="submit"]:hover {
 	background-color: rgb(219, 223, 186);
 	padding: 210px;
 }
-.container1{
+.container1 {
 	border-radius: 5px;
 	background-color: rgb(255, 255, 255);
 	padding: 50px;
@@ -52,8 +52,10 @@ input[type="submit"]:hover {
 	margin-left: 280px;
 }
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+	.col-25,
+	.col-75,
+	input[type="submit"] {
+		width: 100%;
+		margin-top: 0;
+	}
 }

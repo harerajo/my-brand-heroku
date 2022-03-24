@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUBSCRIBERS</title>
+    <title>Subscribers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/subscribers-dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/popup.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/subscribers-dashboard.css">
 </head>
 
 <body>
@@ -19,28 +23,28 @@
             <i class="fa fa-bars" id="sidebar_btn"></i>
         </label>
         <div class="left_area">
-            <h3>user <span>dashboard</span></h3>
+            <h3>Subscriber <span>dashboard</span></h3>
         </div>
         <div class="right_area">
-            <a href="/pages/login.html" class="logout_btn">Log out</a>
+            <a href="/pages/login.html" onclick="logout()" class="logout_btn">Log out</a>
         </div>
     </header>
     <div class="side_bar">
         <center>
-            <img src="../images/WhatsApp Image 2022-01-30 at 6.11.04 PM.jpeg" class="profile_image">
+            <img src="../images/WhatsApp Image 2022-01-30 at 6.11.04 PM.jpeg" id="sidebar-profile-image">
         </center>
         <a href="profiledash.html"><i class="fa fa-user"></i><span>Profile</span></a>
-        <a href="blogs-dashboard.html" class="active"><i class="fa fa-file-text"></i><span>Blogs</span></a>
+        <a href="blogs-dashboard.html"><i class="fa fa-file-text"></i><span>Blogs</span></a>
         <a href="queries-dashboard.html"><i class="fa fa-comment"></i><span>User messages</span></a>
-        <a href="subscribers-dashboard.html"><i class="fa fa-bell"></i><span>Subscribers</span></a>
+        <a class="active-tab" href="subscribers-dashboard.html"><i class="fa fa-bell"></i><span>Subscribers</span></a>
     </div>
     <div class="content" id="Subscribers-list">
         <div class="users">
             <table>
                 <thead>
                     <tr>
-                        <td id="sub-name">subscriber name</td>
-                        <td id="sub-name">subscriber email</td>
+                        <td id="sub-name">Subscriber name</td>
+                        <td id="sub-name">Subscriber email</td>
                     </tr>
                 </thead>
                 <tbody id="t-body">
@@ -50,9 +54,7 @@
         </div>
         <div id="popupmessage"></div>
     </div>
-    <script>
-    </script>
-    <script src="../scripts/contact.js"></script>
+    <script src="../scripts/profile.js"></script>
     <script src="../scripts/subscribe.js"></script>
     <script src="../scripts/auth.js"></script>
 </body>

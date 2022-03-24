@@ -16,7 +16,7 @@ button {
 	border: 2px solid #1a9c03;
 	font-size: 18px;
 	cursor: pointer;
-	transition: .7s;
+	transition: 0.7s;
 }
 
 input[type="submit"]:hover,
@@ -30,7 +30,38 @@ button:hover {
 	margin: 0 auto;
 }
 
+/* LOGOUT STYLES */
+.logout_btn {
+	padding: 5px;
+	background: rgb(19, 13, 7);
+	float: right;
+	margin-top: -30px;
+	margin-right: 40px;
+	border-radius: 2px;
+	font-size: 15px;
+	font-weight: 600px;
+	color: #fff;
+	transition-property: background;
+}
+.logout_btn:hover {
+	background: rgb(70, 235, 158);
+}
 
+#error {
+	color: red;
+}
+.users {
+	margin: 50px;
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-evenly;
+	height: fit-content;
+	border-width: 10px solid;
+	flex-wrap: wrap;
+}
 @media screen and (max-width: 768px) {
 	.container {
 		width: 100%;

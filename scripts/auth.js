@@ -7,6 +7,7 @@ function popup(message) {
 		x.className = x.className.replace("show", "");
 	}, 3000);
 }
+
 async function addUser(e) {
 	const email = document.getElementById("email").value;
 	const password = document.getElementById("password").value;
@@ -22,7 +23,7 @@ async function addUser(e) {
 	})
 		.then((res) => res.json())
 		.then((response) => {
-			if (response.status !== 200) {
+			if (response.status !== 200 && response.status !== 201) {
 				error = response.error || response.message;
 				document.getElementById("error").innerHTML = error;
 			}
@@ -35,13 +36,13 @@ async function addUser(e) {
 			console.log(err);
 		});
 }
-function loginUser() {
+
+async function loginUser() {
 	const email = document.getElementById("email").value;
 	const password = document.getElementById("password").value;
-	console.log(email, password);
 
 	let error = null;
-	let url = "http://localhost:4000/api";
+	let url = "https://johhny-brand-staging.herokuapp.com/api";
 	await fetch(url + "/auth/login", {
 		method: "POST",
 		headers: { "Content-type": "application/json; charset=UTF-8" },
@@ -50,7 +51,7 @@ function loginUser() {
 		.then((res) => res.json())
 		.then((response) => {
 			if (response.status !== 200) {
-				error = response.message;
+				error = response.error || response.message;
 				document.getElementById("error").innerHTML = error;
 			}
 			if (response.status == 200) {
@@ -63,21 +64,24 @@ function loginUser() {
 			console.log(err);
 		});
 }
-  
 
-function saveUserProfile({ name, email }) {
-	db.collection("users")
-		.doc()
-		.set({
-			name,
-			email,
-			created_at: new Date(),
-		})
-		.then(() => {
-			alert("You successfully created account");
-			window.location.href = "./profiledash";
-		})
-		.catch((error) => {
-			alert(error?.message || "An error occurred");
-		});
+async function logout() {
+	localStorage.removeItem("token");
+	window.location.href = "./login.html";
+}
+
+function decodeToken() {
+	let token = localStorage.getItem("token");
+	var base64Url = token.split(".")[1];
+	var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+	var jsonPayload = decodeURIComponent(
+		atob(base64)
+			.split("")
+			.map(function (c) {
+				return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+			})
+			.join("")
+	);
+
+	return JSON.parse(jsonPayload);
 }
