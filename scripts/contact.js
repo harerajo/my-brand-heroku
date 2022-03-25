@@ -15,12 +15,12 @@ async function sendQuery() {
 
 	const name = document.getElementById("sender-name").value;
 	const email = document.getElementById("sender-email").value;
-	const queries = document.getElementById("sender-message").value;
+	const query = document.getElementById("sender-message").value;
 
 	await fetch(url + "/queries", {
 		method: "POST",
 		headers: { "Content-type": "application/json; charset=UTF-8" },
-		body: JSON.stringify({ name, email, queries }),
+		body: JSON.stringify({ name, email, query }),
 	})
 		.then((res) => res.json())
 		.then((response) => {
