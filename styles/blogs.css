@@ -2,12 +2,12 @@
 	padding-left: 10px;
 	border-radius: 19px;
 }
-.blog {
+#blog-title {
 	font-size: 350%;
 	margin-left: 10%;
 	padding-top: 8%;
 }
-.text {
+#blog-content {
 	text-align: justify;
 	padding: 50px;
 }
@@ -15,27 +15,26 @@ p {
 	padding: 28px;
 	font-size: large;
 }
-.article {
-	 padding-left: 08%;
-    width: 800px;
-    display: flex;
-    text-align: center;
-    margin-left: 200px;
-    border-radius: 9000px;
-
+#blog-image {
+	padding-left: 08%;
+	width: 800px;
+	display: flex;
+	text-align: center;
+	margin-left: 200px;
+	border-radius: 9000px;
 }
 .comment {
 	display: flex;
 	flex-direction: row;
 }
-.blog-end{
+.blog-end {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	padding: 50px;
 	gap: 10px;
 }
-.blogbtn{
+.blogbtn {
 	height: 60px;
 	width: 204px;
 	border-radius: 10px;
@@ -45,8 +44,8 @@ textarea {
 	padding: 10px;
 	border-radius: 12px;
 }
-@media screen and (max-width:200px) {
-	img{
+@media screen and (max-width: 200px) {
+	img {
 		padding: 40px;
 		max-width: 300px;
 		margin-left: 30px;

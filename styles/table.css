@@ -7,10 +7,11 @@ thead {
 	background-color: #333;
 	color: white;
 	border-bottom: 5px solid white;
+	text-transform: capitalize;
 }
 thead,
 td {
-	padding: 20px;
+	padding: 10px;
 	font-size: medium;
 }
 tbody {
@@ -52,4 +53,24 @@ td #sub-name {
 	display: none;
 	overflow: hidden;
 	background-color: #f1f1f1;
+}
+
+.edit-btn,
+.delete-btn {
+	padding: 10px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+	color: rgb(81, 148, 206);
+}
+
+.actions {
+	display: flex;
+	flex-direction: row;
+}
+
+.article-content {
+	height: 50px;
+	overflow: hidden;
 }
